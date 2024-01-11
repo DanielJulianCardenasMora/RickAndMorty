@@ -36,7 +36,7 @@ function App() {
   return (
     <div className='App'>
       <NavBar onSearch={onSearch} />
-      <Cards characters={characters} onClose={onClosecd} />
+      <Cards characters={characters} onClose={onClose} />
       <h1>Hello world</h1>
     </div>
   )
