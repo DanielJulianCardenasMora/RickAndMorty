@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+.navBarContariner{
+    width: 100vw;
+    height: 100px;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #4f772d;
+    padding-left: 1em;
+}
