@@ -11,31 +11,58 @@ import style from './Card.module.css'
 export default function Card({id, name, species, status, gender, origin, image, onClose}) {
    return (
       <div className={style.cardUnica}>
-         <button
-            className='closeCard'
-            onClick={()=> onClose(id)}>x</button>
-         <h2>
-            {id}
-         </h2>
-         <Link to={`/detail/${id}`}> <h2 style={{ color: '#646cff' }}>
-            {name}
-         </h2> </Link>
-         <h2>
-            {status}
-         </h2>
-         <h2>
-            {species}
-         </h2>
-         <h2>
-            {gender}
-         </h2>
-         <h2>
-            {origin}
-         </h2>
-         <img
-            className='imgCard'
-            src={image}
-            alt='image' />
+
+         <div className={style.imgRow}>
+            <div className={style.imgContainer}>
+               <img
+                  className='imgCard'
+                  src={image}
+                  alt='image' />
+            </div>
+
+         </div>
+
+
+         <div className={style.firstRow}>
+            <div className={style.rowName}>
+               <Link to={`/detail/${id}`}>
+                  <p style={{ color: '#646cff' }}>
+                     {name}
+                  </p>
+               </Link>
+            </div>
+
+            <div className={style.rowSpecies}>
+               <p>
+                  {species}
+               </p>   
+            </div>      
+            
+            {/* <h2>
+               {status}
+            </h2> */}
+            {/* <h2>
+               {gender}
+            </h2>
+            <h2>
+               {origin}
+            </h2> */}
+         </div>
+
+         <div className={style.secondRow}>
+            <div className={style.secondRowId}>
+               <p>
+                  {id}
+               </p>
+            </div>
+
+            <div className={style.secondRowBot}>
+               <button
+                  className={style.closeCard}
+                     onClick={() => onClose(id)}>x</button>
+            </div>  
+         </div>
       </div>
+      
    )
 }

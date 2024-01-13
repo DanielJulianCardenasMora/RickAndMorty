@@ -6,19 +6,31 @@ import Detail from './components/Detail/Detail'
 import { useState } from 'react'
 import axios from 'axios';
 import { Routes, Route } from 'react-router-dom'
+import fondo from './Images/fondo.webp'
 
 
-
+var sectionStyle = {
+ 
+  
+  
+  backgroundImage: `url(${fondo})`,
+  backgroundPosition: 'center',
+  backgroundSize: '60%',
+  backgroundRepeat: 'no-repeat'
+};
 
 function App() {
   const [characters, setCharacters] = useState([])
-  const URL_BASE = 'https://rym2.up.railway.app/api/character/'
-  const API_KEY = 'henrystaff'
+  // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
+  // const API_KEY = 'henrystaff' ?key=${API_KEY}
+  const URL_BASE = 'https://rickandmortyapi.com/api/character/'
+
+
   const onSearch = (id) => {
     if (!id) return alert('ingresa un ID')
     if (characters.find(char => char.id === parseInt(id))) return alert(`Ya existe el personaje con el id ${id}`)
     
-    axios.get(`${URL_BASE}${id}?key=${API_KEY}`)
+    axios.get(`${URL_BASE}${id}`)
     .then(({data}) => {
     
       if (data.name) {
@@ -36,14 +48,18 @@ function App() {
   return (
     <div className='App'>
       <NavBar onSearch={onSearch} />
+      {/* <div style={sectionStyle}> */}
 
       <Routes> 
         <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
         <Route path='/about' element={ <About/> } />
         <Route path='/detail/:id' element={ <Detail/> } />
       </Routes>
+      
 
-      <h1>Hi, are you ok?</h1>
+      {/* </div> */}
+      <h1>Hi</h1>
+      {/* <button class="button-64" role="button"><span class="text">Button 64</span></button> */}
       <h1 style={{fontSize: '100px'}}>👍👍👍</h1>
     </div>
   )
