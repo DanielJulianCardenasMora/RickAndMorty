@@ -6,18 +6,9 @@ import Detail from './components/Detail/Detail'
 import { useState } from 'react'
 import axios from 'axios';
 import { Routes, Route } from 'react-router-dom'
-import fondo from './Images/fondo.webp'
 
 
-var sectionStyle = {
- 
-  
-  
-  backgroundImage: `url(${fondo})`,
-  backgroundPosition: 'center',
-  backgroundSize: '60%',
-  backgroundRepeat: 'no-repeat'
-};
+
 
 function App() {
   const [characters, setCharacters] = useState([])

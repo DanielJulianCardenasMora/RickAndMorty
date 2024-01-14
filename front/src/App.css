@@ -3,17 +3,10 @@
   align-items: center;
   width: 3000px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0rem;
   text-align: center;
 }
 
-.background{
-  width: 300px;
-  background-image: url('../../Images/fondo.webp'); 
-  background-position: center;
-  background-size: 60%;
-  background-repeat: no-repeat;
-}
 
 .button-64 {
   align-items: center;
