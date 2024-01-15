@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import style from './SearchBar.module.css'
 
 
 
@@ -20,18 +20,19 @@ function SearchBar(props) {
    }
 
    return (
-      <div className="divSearch">
+      <div className={style.divSearch}>
          <input
             className="inpSearch"
             type='search'
             placeholder="ingresa un ID hasta 826"
             value = {id}
             onChange={handleChange} />
-         <button
-            className='botAgregar'
-            onClick={search}>Agregar</button> 
+         <button className={style.botones} onClick={search}><span class="text">
+            Agregar</span></button> 
       </div>
    );
 }
 
 export default SearchBar
+
+

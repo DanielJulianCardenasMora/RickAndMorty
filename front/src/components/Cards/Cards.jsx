@@ -1,6 +1,6 @@
 import Card from '../Card/Card';
 import style from './Cards.module.css'
-import fondo from '../../Images/fondo.webp'
+
 
 
 
@@ -13,6 +13,7 @@ export default function Cards(props) {
       <div>
          
          <div className={style.background}> </div>
+
          <div className={style.cardsContainer}>
 
             {props.characters.map(character => (

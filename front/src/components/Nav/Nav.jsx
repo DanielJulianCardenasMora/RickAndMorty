@@ -9,15 +9,15 @@ import style from "./Nav.module.css"
 
 export default function NavBar({onSearch}) {
     return (
-        <div style={{ backgroundColor: "lightgray", display: 'flex', width: '700px', justifyContent: "space-evenly", padding: '15px'}} className={style.navBarContariner}>
-            <div className="botonesNav">
+        <div className={style.navBarContariner}>
+            <div className={style.botonesNav}>
 
-                <button>
-                    <Link to={'/home'}>Home</Link>
+                <button className={style.botones} ><span class="text">
+                    <Link to={'/home'}>Home</Link></span>
                 </button>
 
-                <button>
-                    <Link to={'/about'}>About</Link>
+                <button className={style.botones} ><span class="text">
+                    <Link to={'/about'}>About</Link></span>
                 </button>
             </div>
 
@@ -31,5 +31,5 @@ export default function NavBar({onSearch}) {
 
 
 
-
+{/* <button class="button-64" role="button"><span class="text">Button 64</span></button> */}
 

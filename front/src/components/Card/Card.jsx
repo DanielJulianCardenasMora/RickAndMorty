@@ -26,7 +26,7 @@ export default function Card({id, name, species, status, gender, origin, image, 
          <div className={style.firstRow}>
             <div className={style.rowName}>
                <Link to={`/detail/${id}`}>
-                  <p style={{ color: '#646cff' }}>
+                  <p>
                      {name}
                   </p>
                </Link>

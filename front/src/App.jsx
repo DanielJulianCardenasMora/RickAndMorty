@@ -39,18 +39,13 @@ function App() {
   return (
     <div className='App'>
       <NavBar onSearch={onSearch} />
-      {/* <div style={sectionStyle}> */}
-
       <Routes> 
         <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
         <Route path='/about' element={ <About/> } />
         <Route path='/detail/:id' element={ <Detail/> } />
       </Routes>
-      
-
-      {/* </div> */}
       <h1>Hi</h1>
-      {/* <button class="button-64" role="button"><span class="text">Button 64</span></button> */}
+ 
       <h1 style={{fontSize: '100px'}}>👍👍👍</h1>
     </div>
   )
