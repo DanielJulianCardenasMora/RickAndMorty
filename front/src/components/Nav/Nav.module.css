@@ -7,7 +7,7 @@
 
 
 
-.navBarContariner{
+/* .navBarContariner{
   height: 140px;
   display: flex;
   align-items: center;
@@ -16,10 +16,28 @@
   justify-content: space-between;
   background: linear-gradient(-180deg,
     hsla(214, 97%, 38%, 0.4) 40%,
-    /* hsla(258, 93%, 47%, 0.6) 30%, */
+    hsla(258, 93%, 47%, 0.6) 30%,
     hsla(249, 100%, 5%, 0.7) 95%, 
+    hsla(263, 100%, 48%, 0.6) 60%,
+    hsl(269, 86%, 50%, 0) 0%
+    );
+  
+} */
+
+.navBarContariner{
+  height: 140px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  width: auto;
+  justify-content: space-between;
+
+  background: linear-gradient(180deg,
+    hsla(214, 97%, 38%, 0.4) 70%,
+    /* hsla(258, 93%, 47%, 0.6) 30%, */
+    hsla(249, 100%, 5%, 0.7) 100% 
     /* hsla(263, 100%, 48%, 0.6) 60%, */
-    hsl(269, 86%, 50%, 0) 100%
+    /* hsl(269, 86%, 50%, 0) 0% */
     );
   
 }
@@ -34,6 +52,7 @@
   line-height: 3px;
   align-items: center;
   margin-left: 10%;
+  margin-top: 38px;
 }
 
 

@@ -9,7 +9,7 @@
 
 .inpSearch{
   background-color: rgb(255, 255, 255);
-  height: 60%;
+  height: 30px;
   width: 200px;
   border-radius: 6px;
   margin-right: 40px;
@@ -23,11 +23,12 @@
   width: 30%;
   display: flex;
   justify-content: flex-end;
-  height: 35%;
+  height: 20px;
   font-size: 10px;
   line-height: 3px;
   align-items: center;
   margin-right: 10%;
+  margin-top: 38px;
     
 }
 .botones {
