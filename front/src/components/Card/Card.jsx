@@ -1,17 +1,44 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import style from './Card.module.css'
+import { useDispatch, useSelector } from "react-redux";
+import { addFav, removeFav } from "../../Redux/actions";
+import { useEffect, useState } from "react";
 
 
 
 
+export default function Card({ id, name, species, status, gender, origin, image, onClose }) {
+   const [isFav, setIsFav]= useState(false)
+   const state = useSelector((state) => state.myFavorites);
+   const dispatch = useDispatch();
+   const {pathname} = useLocation()
 
+   const handleFavorite = () => {
+      if (isFav) {
+         setIsFav(false)
+         dispatch(removeFav(id))
+      }
+      else if (!isFav) {
+         setIsFav(true)
+         dispatch(addFav({ id, name, species, image }))
+      }
+   }
 
+   useEffect(() => {
+      state.forEach((fav) => {
+         fav.id === id && setIsFav(true)
+      });
+   }, []);
 
-
-export default function Card({id, name, species, status, gender, origin, image, onClose}) {
    return (
       <div className={style.cardUnica}>
-
+         {
+            isFav ? (
+               <button onClick={handleFavorite}>❤️</button>
+            ) : (
+               <button onClick={handleFavorite}>🤍</button>
+            )
+         }
          <div className={style.imgRow}>
             <div className={style.imgContainer}>
                <img
@@ -19,7 +46,6 @@ export default function Card({id, name, species, status, gender, origin, image, 
                   src={image}
                   alt='image' />
             </div>
-
          </div>
 
 
@@ -37,16 +63,6 @@ export default function Card({id, name, species, status, gender, origin, image, 
                   {species}
                </p>   
             </div>      
-            
-            {/* <h2>
-               {status}
-            </h2> */}
-            {/* <h2>
-               {gender}
-            </h2>
-            <h2>
-               {origin}
-            </h2> */}
          </div>
 
          <div className={style.secondRow}>
@@ -57,12 +73,13 @@ export default function Card({id, name, species, status, gender, origin, image, 
             </div>
 
             <div className={style.secondRowBot}>
-               <button
-                  className={style.closeCard}
-                     onClick={() => onClose(id)}>x</button>
+               {
+                  pathname === '/home'&& <button className={style.closeCard}
+                     onClick={() => onClose(id)}>x</button>   
+               }
             </div>  
          </div>
+         
       </div>
-      
    )
 }

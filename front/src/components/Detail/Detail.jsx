@@ -9,13 +9,14 @@ import { useState, useEffect } from 'react'
 
 function Detail() {
     const [character, setCharacter] = useState({})  
-    const URL_BASE = 'https://rym2.up.railway.app/api/character/'
-    const API_KEY = 'henrystaff'
+    // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
+    // const API_KEY = 'henrystaff'
+    const URL_BASE = 'https://rickandmortyapi.com/api/character/'
     const {id} = useParams()
     
     useEffect(() => {
 
-        axios.get(`${URL_BASE}${id}?key=${API_KEY}`)
+        axios.get(`${URL_BASE}${id}`)
             .then(({ data }) => {
                 if (data.name) {
                     setCharacter(data);
@@ -34,13 +35,12 @@ function Detail() {
     return (
         <div>
             <h1>{ character?.id }</h1>
-            <h2>Name:{ character?.name }</h2>
-            <h2>Status:{ character?.name }</h2>
-            <h2>Specie:{ character?.name }</h2>
-            <h2>Gender:{ character?.name }</h2>
-            <h2>Origin:{ character?.origin?.name }</h2>
-            <img src={character?.image} alt={'image'}/>
-          Detail
+            <h2>Name:{ character.name }</h2>
+            <h2>Status:{ character.status }</h2>
+            <h2>Specie:{ character.species }</h2>
+            <h2>Gender:{ character.gender }</h2>
+            <h2>Origin:{ character.origin?.name }</h2>
+            <img src={character.image} alt={'image'}/>
       </div>
     )
 

@@ -22,13 +22,13 @@ function SearchBar(props) {
    return (
       <div className={style.divSearch}>
          <input
-            className="inpSearch"
+            className={style.inpSearch}
             type='search'
-            placeholder="ingresa un ID hasta 826"
+            placeholder="Ingresa id max 826"
             value = {id}
             onChange={handleChange} />
-         <button className={style.botones} onClick={search}><span class="text">
-            Agregar</span></button> 
+         <button className={style.botones} onClick={search}><span>
+            AGREGAR</span></button> 
       </div>
    );
 }

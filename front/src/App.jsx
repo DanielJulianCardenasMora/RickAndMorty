@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Form from './components/Form/Form'
+import Favorites from './components/Favorites/Favorites'
 
 
 
@@ -19,8 +20,8 @@ function App() {
   // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
   // const API_KEY = 'henrystaff' ?key=${API_KEY}
   const URL_BASE = 'https://rickandmortyapi.com/api/character/'
-  const EMAIL = 'daniel@mail.com'
-  const PASSWORD = 'pass1234'
+  const EMAIL = ''
+  const PASSWORD = ''
   
 
 
@@ -60,7 +61,8 @@ function App() {
         <Route path='/' element={<Form login={login} />}/>
         <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
         <Route path='/about' element={ <About/> } />
-        <Route path='/detail/:id' element={ <Detail/> } />
+        <Route path='/detail/:id' element={<Detail />} />
+        <Route path='/favorites' element={<Favorites/>}/>
       </Routes>
       <h1>Hi</h1>
  

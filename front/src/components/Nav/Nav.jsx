@@ -12,13 +12,23 @@ export default function NavBar({onSearch}) {
         <div className={style.navBarContariner}>
             <div className={style.botonesNav}>
 
-                <button className={style.botones} ><span class="text">
-                    <Link to={'/home'}>Home</Link></span>
-                </button>
+                <Link to={'/home'}>
+                    <button className={style.botones} >
+                        <span>HOME</span>
+                    </button>
+                </Link>
 
-                <button className={style.botones} ><span class="text">
-                    <Link to={'/about'}>About</Link></span>
-                </button>
+                <Link to={'/about'}>
+                    <button className={style.botones} >
+                        <span>ABOUT</span>
+                    </button>
+                </Link>
+
+                <Link to={'/favorites'}>
+                    <button className={style.botones} >
+                        <span>FAVORITES</span>
+                    </button>
+                </Link>
             </div>
 
             <SearchBar

@@ -1,63 +1,81 @@
 
-.divSearch{
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    height: 20px;
-    font-size: 10px;
-    line-height: 3px;
-    align-items: center;
 
-    
+
+
+
+
+
+
+
+.inpSearch{
+  background-color: rgb(255, 255, 255);
+  height: 60%;
+  width: 200px;
+  border-radius: 6px;
+  margin-right: 40px;
+  border: 5px solid rgb(255, 255, 255);
+  outline: none;
+  font-size: 11px;
+  color: black;
 }
 
+.divSearch{
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  height: 35%;
+  font-size: 10px;
+  line-height: 3px;
+  align-items: center;
+  margin-right: 10%;
+    
+}
 .botones {
-    font-weight: 900;
-    color: #000000;
-    text-decoration: inherit;
-    align-items: center;
-    background-image: linear-gradient(144deg,#eb007d, #64f40b 50%,#e8e113);
-    border: 0;
-    border-radius: 8px;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    box-sizing: border-box;
-    display: flex;
-    font-family: Phantomsans, sans-serif;
-    font-size: 5px;
-    justify-content: center;
-    line-height: 5px;
-    width: 50px;
-    padding: 3px;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    cursor: pointer;
-  }
+  align-items: center;
+  background-image: linear-gradient(144deg,#1f00eb, #7913fd 50%,#77f6ff);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  line-height: 1px;
+  width: 50px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 8px;
+}
   
 .botones:active,
 .botones:hover {
-outline: 0;
+  outline: 0;
 }
 
 .botones span {
-background-color: rgb(44, 128, 230);
-padding: 16px 24px;
-border-radius: 6px;
-width: 100%;
-height: 100%;
-transition: 300ms;
+  background-color: rgb(41, 5, 82);
+  padding: 18px 4px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+ 
+
 }
 
 .botones:hover span {
-background: none;
+  background: none;
+  color: #dd66f2
 }
 
 @media (min-width: 768px) {
 .botones {
-font-size: 14px;
-min-width: 108px;
+  font-size: 22px;
+  min-width: 85px;
 }
 }
-  
