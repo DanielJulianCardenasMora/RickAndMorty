@@ -1,13 +1,38 @@
 import React from 'react'
 import Card from '../Card/Card'
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { filterCards, orderCards } from "../../Redux/actions";
+
+
+
+
 
 function Favorites() {
     const state = useSelector((state) => state.myFavorites)
-
+    const dispatch = useDispatch()
+    const handleOrder = (evento)=> {
+        dispatch(orderCards(evento.target.value))
+    }
+    const handleFilter = (evento)=> {
+        dispatch(filterCards(evento.target.value))
+    }
 
     return (
         <div>
+            <div>
+                <select name='order'defaultValue='orderCharacter' onChange={handleOrder}>
+                    <option value='orderCharacter' disabled='disabled'>Order...</option>
+                    <option value='A'>Ascendente</option>
+                    <option value='D'>Descendente</option>
+                </select>
+                <select name='filter' defaultValue='All' onChange={handleFilter}>
+                    <option value='All'>All</option>
+                    <option value='Male'>Male</option>
+                    <option value='Female'>Female</option>
+                    <option value="Genderless">Genderless</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </div>
             {
                 state.map(character => (
                     <Card
@@ -16,6 +41,7 @@ function Favorites() {
                         name={character.name}
                         species={character.species}
                         image={character.image}
+                        gender={character.gender}
                     />
                 ))
             }

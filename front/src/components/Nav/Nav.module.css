@@ -7,22 +7,7 @@
 
 
 
-/* .navBarContariner{
-  height: 140px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: auto;
-  justify-content: space-between;
-  background: linear-gradient(-180deg,
-    hsla(214, 97%, 38%, 0.4) 40%,
-    hsla(258, 93%, 47%, 0.6) 30%,
-    hsla(249, 100%, 5%, 0.7) 95%, 
-    hsla(263, 100%, 48%, 0.6) 60%,
-    hsl(269, 86%, 50%, 0) 0%
-    );
-  
-} */
+
 
 .navBarContariner{
   height: 140px;

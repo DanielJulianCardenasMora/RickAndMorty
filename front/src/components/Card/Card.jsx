@@ -20,7 +20,7 @@ export default function Card({ id, name, species, status, gender, origin, image,
       }
       else if (!isFav) {
          setIsFav(true)
-         dispatch(addFav({ id, name, species, image }))
+         dispatch(addFav({ id, name, species, image, gender }))
       }
    }
 
@@ -32,13 +32,7 @@ export default function Card({ id, name, species, status, gender, origin, image,
 
    return (
       <div className={style.cardUnica}>
-         {
-            isFav ? (
-               <button onClick={handleFavorite}>❤️</button>
-            ) : (
-               <button onClick={handleFavorite}>🤍</button>
-            )
-         }
+     
          <div className={style.imgRow}>
             <div className={style.imgContainer}>
                <img
@@ -50,6 +44,7 @@ export default function Card({ id, name, species, status, gender, origin, image,
 
 
          <div className={style.firstRow}>
+            
             <div className={style.rowName}>
                <Link to={`/detail/${id}`}>
                   <p>
@@ -57,7 +52,7 @@ export default function Card({ id, name, species, status, gender, origin, image,
                   </p>
                </Link>
             </div>
-
+           
             <div className={style.rowSpecies}>
                <p>
                   {species}
@@ -71,7 +66,13 @@ export default function Card({ id, name, species, status, gender, origin, image,
                   {id}
                </p>
             </div>
-
+            {
+            isFav ? (
+                  <button className={style.like} onClick={handleFavorite}>❤️</button>
+            ) : (
+               <button className={style.like} onClick={handleFavorite}>🤍</button>
+            )
+         }
             <div className={style.secondRowBot}>
                {
                   pathname === '/home'&& <button className={style.closeCard}

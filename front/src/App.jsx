@@ -64,9 +64,6 @@ function App() {
         <Route path='/detail/:id' element={<Detail />} />
         <Route path='/favorites' element={<Favorites/>}/>
       </Routes>
-      <h1>Hi</h1>
- 
-      <h1 style={{fontSize: '100px'}}>👍👍👍</h1>
     </div>
   )
 }
