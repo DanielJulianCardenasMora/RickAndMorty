@@ -16,7 +16,6 @@
   flex-direction: row;
   width: auto;
   justify-content: space-between;
-
   background: linear-gradient(180deg,
     hsla(214, 97%, 38%, 0.4) 70%,
     /* hsla(258, 93%, 47%, 0.6) 30%, */
@@ -24,7 +23,6 @@
     /* hsla(263, 100%, 48%, 0.6) 60%, */
     /* hsl(269, 86%, 50%, 0) 0% */
     );
-  
 }
 
 
@@ -66,6 +64,7 @@
 }
   
 .botones:active,
+.botones:focus,
 .botones:hover {
   outline: 0;
 }
@@ -77,72 +76,18 @@
   width: 100%;
   height: 100%;
   transition: 300ms;
- 
+  outline: none;
 
 }
 
 .botones:hover span {
   background: none;
-  color: #dd66f2
+  color: #dd66f2;
 }
 
 @media (min-width: 768px) {
-.botones {
-  font-size: 22px;
-  min-width: 85px;
-}
-}
-
-  
-
-/* 
-
-.botones {
-    align-items: center;
-    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-    border: 0;
-    border-radius: 8px;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    display: flex;
-    font-family: Phantomsans, sans-serif;
-    font-size: 20px;
-    justify-content: center;
-    line-height: 1em;
-    max-width: 100%;
-    min-width: 140px;
-    padding: 3px;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    cursor: pointer;
+  .botones {
+    font-size: 22px;
+    min-width: 85px;
   }
-  
-.botones:active,
-.botones:hover {
-outline: 0;
 }
-
-.botones span {
-background-color: rgb(5, 6, 45);
-padding: 16px 24px;
-border-radius: 6px;
-width: 100%;
-height: 100%;
-transition: 300ms;
-}
-
-.botones:hover span {
-background: none;
-}
-
-@media (min-width: 768px) {
-.botones {
-font-size: 24px;
-min-width: 196px;
-}
-}
-   */

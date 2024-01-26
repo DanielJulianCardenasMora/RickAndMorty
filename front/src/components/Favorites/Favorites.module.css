@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+
+/* 
+.sence{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    width: 20%;
+    height: 30px;
+
+}
+
+.options{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    width: 20%;
+    height: 30px;
+} */
+
+
+:root {
+    --arrow-bg: rgba(17, 175, 11, 0.8);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: rgb(6, 27, 216);
+    --select-bg: rgba(17, 175, 11, 0.5);
+  }
+
+  /* <select> styles */
+  select {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 30px;
+    margin-left: 30px;
+    
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 20rem;
+    padding: 0.5rem 4rem 0.5rem 1.5rem;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+      linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    color: rgb(12, 11, 119);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* Remove IE arrow */
+    &::-ms-expand {
+      display: none;
+    }
+    /* Remove focus outline */
+    &:focus {
+      outline: none;
+    }
+    /* <option> colors */
+}
+
+option {
+  color: inherit;
+  background-color: rgb(24, 196, 53);
+}

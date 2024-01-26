@@ -11,12 +11,13 @@ function Detail() {
     const [character, setCharacter] = useState({})  
     // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
     // const API_KEY = 'henrystaff'
-    const URL_BASE = 'https://rickandmortyapi.com/api/character/'
-    const {id} = useParams()
+    // const URL_BASE = 'https://rickandmortyapi.com/api/character/'
+    const URL = "http://localhost:3001/rickandmorty/character/"
+    const { id } = useParams()
     
     useEffect(() => {
 
-        axios.get(`${URL_BASE}${id}`)
+        axios.get(`${URL}${id}`)
             .then(({ data }) => {
                 if (data.name) {
                     setCharacter(data);

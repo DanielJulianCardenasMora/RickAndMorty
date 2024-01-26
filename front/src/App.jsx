@@ -19,7 +19,8 @@ function App() {
   const navigate = useNavigate()
   // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
   // const API_KEY = 'henrystaff' ?key=${API_KEY}
-  const URL_BASE = 'https://rickandmortyapi.com/api/character/'
+  // const URL_BASE = 'https://rickandmortyapi.com/api/character/'
+  const URL = "http://localhost:3001/rickandmorty/character/"
   const EMAIL = ''
   const PASSWORD = ''
   
@@ -29,16 +30,17 @@ function App() {
     if (!id) return alert('ingresa un ID')
     if (characters.find(char => char.id === parseInt(id))) return alert(`Ya existe el personaje con el id ${id}`)
     
-    axios.get(`${URL_BASE}${id}`)
-    .then(({data}) => {
-    
-      if (data.name) {
-        setCharacters([data, ...characters])
-      }else {
-        alert('No hay personajes con ese ID')
-      }  
-    })
-    .catch(err => alert(err.message))
+    axios
+      .get(`${URL}${id}`)
+      .then(({data}) => {
+      
+        if (data.name) {
+          setCharacters([data, ...characters])
+        }else {
+          alert('No hay personajes con ese ID')
+        }  
+      })
+      .catch(err => alert(err.message))
   }
   const onClose = (id) => {
     setCharacters(characters.filter(char => char.id !== id))

@@ -7,16 +7,31 @@
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
+
 .inpSearch{
   background-color: rgb(255, 255, 255);
   height: 30px;
   width: 200px;
   border-radius: 6px;
   margin-right: 40px;
-  border: 5px solid rgb(255, 255, 255);
+  border: none;
   outline: none;
-  font-size: 11px;
-  color: black;
+  padding-left: 8px;
+  color: rgb(228, 13, 13);
+  font-family: 'Dosis', sans-serif;
+  font-size: 17px;
+  
+  
+}
+::placeholder {
+  color: rgb(201, 1, 1);
+  font-family: 'Dosis', sans-serif;
+  font-size: 17px;
+
+  
+
 }
 
 .divSearch{
@@ -29,6 +44,7 @@
   align-items: center;
   margin-right: 10%;
   margin-top: 38px;
+  
     
 }
 .botones {
@@ -54,6 +70,7 @@
 }
   
 .botones:active,
+.botones:focus,
 .botones:hover {
   outline: 0;
 }

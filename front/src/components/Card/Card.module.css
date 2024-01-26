@@ -8,7 +8,7 @@
 
 
 img{
-    width: 180px;
+    width: 185px;
     border-radius: 3px;
 }
 .imgContainer{
@@ -25,8 +25,8 @@ img{
     display: inline-block;
     justify-content: flex-end;
     font-size: 15px;
-    padding: 10px 4px 10px 4px;
-    margin: 0px 105px 110px 105px;
+    padding: 9px 8px 18px 8px;
+    margin: 0px 0px 110px 0px;
     border-radius: 10px;
     height: 250px;
 }
@@ -34,6 +34,7 @@ img{
 
 /* --------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600&display=swap');
 
 .firstRow{
     container-type: inline-size;
@@ -44,7 +45,8 @@ img{
     margin-top: 6px;
     align-items: center;
     text-align: center;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
 }
 .rowName{
     padding: 0.5em 0.4em 0.5em 0.4em;
@@ -57,6 +59,7 @@ img{
     border-radius: 7px;
     border: 1px solid rgb(255, 255, 255);
     color:rgb(57, 161, 253);
+
 }
 .rowSpecies{
     padding: 0.7em 0.4em 0.7em 0.4em;
@@ -95,7 +98,9 @@ img{
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+
 }
 .secondRowId{
     display: inline-block;

@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../Card/Card'
 import { useSelector, useDispatch } from "react-redux";
 import { filterCards, orderCards } from "../../Redux/actions";
-
+import style from './Favorites.module.css'
 
 
 
@@ -20,12 +20,12 @@ function Favorites() {
     return (
         <div>
             <div>
-                <select name='order'defaultValue='orderCharacter' onChange={handleOrder}>
+                <select className={style.sence} name='order'defaultValue='orderCharacter' onChange={handleOrder}>
                     <option value='orderCharacter' disabled='disabled'>Order...</option>
                     <option value='A'>Ascendente</option>
                     <option value='D'>Descendente</option>
                 </select>
-                <select name='filter' defaultValue='All' onChange={handleFilter}>
+                <select className={style.options} name='filter' defaultValue='All' onChange={handleFilter}>
                     <option value='All'>All</option>
                     <option value='Male'>Male</option>
                     <option value='Female'>Female</option>
