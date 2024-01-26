@@ -25,8 +25,8 @@ img{
     display: inline-block;
     justify-content: flex-end;
     font-size: 15px;
-    padding: 9px 8px 18px 8px;
-    margin: 0px 0px 110px 0px;
+    padding: 9px 8px 50px 8px;
+    margin: 0px 0px 130px 0px;
     border-radius: 10px;
     height: 250px;
 }
@@ -42,7 +42,7 @@ img{
     justify-content: space-between;
     align-items: center;
     height: 35px;
-    margin-top: 6px;
+    margin-top: 15px;
     align-items: center;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
@@ -54,7 +54,7 @@ img{
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 5cqi;
+    font-size: 5.5cqi;
     background-color: rgb(67, 0, 168);
     border-radius: 7px;
     border: 1px solid rgb(255, 255, 255);
@@ -67,7 +67,7 @@ img{
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 5cqi;
+    font-size: 5.5cqi;
     background-color: rgb(149, 0, 255);
     border-radius: 7px;
 }
@@ -80,27 +80,26 @@ img{
 .like{
     padding-left: 0px;
     padding-right: 0px;
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(149, 0, 255, 0.4);
-    font-size: 12px;
+    font-size: 18px;
 }
 
 
 /* --------------------------------- */
 
 .secondRow{
-    height: 25px;
-    padding-top: 7px;
+    height: 20px;
+    margin-top: 27px;
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: center;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 600;
-
 }
 .secondRowId{
     display: inline-block;
@@ -109,9 +108,10 @@ img{
     width: 30px
 }
 .secondRowBot{
-    display: inline-block;
-    /* margin-right: 5px; */
-    width: 30px
+    display: flex;
+    width: 30px;
+    margin-top: 0px;
+    padding-top: 0;
 }
 
 /* --------------------------------- */
