@@ -20,7 +20,7 @@ function App() {
   // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
   // const API_KEY = 'henrystaff' ?key=${API_KEY}
   // const URL_BASE = 'https://rickandmortyapi.com/api/character/'
-  const URL = "http://localhost:3002/rickandmorty/character/"
+  const URL = "http://localhost:3001/rickandmorty/character/"
   const EMAIL = ''
   const PASSWORD = ''
   
@@ -55,7 +55,7 @@ function App() {
 
   function login(userData) {
     const { email, password } = userData;
-    const URL = 'http://localhost:3002/rickandmorty/login/';
+    const URL = 'http://localhost:3001/rickandmorty/login/';
     axios(URL + `?email=${email}&password=${password}`)
       .then(({ data }) => {
         const { access } = data;

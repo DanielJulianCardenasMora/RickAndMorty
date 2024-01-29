@@ -12,7 +12,7 @@ function Detail() {
     // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
     // const API_KEY = 'henrystaff'
     // const URL_BASE = 'https://rickandmortyapi.com/api/character/'
-    const URL = "http://localhost:3002/rickandmorty/character/"
+    const URL = "http://localhost:3001/rickandmorty/character/"
     const { id } = useParams()
     
     useEffect(() => {
