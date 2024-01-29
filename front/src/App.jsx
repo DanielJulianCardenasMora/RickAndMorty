@@ -20,7 +20,7 @@ function App() {
   // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
   // const API_KEY = 'henrystaff' ?key=${API_KEY}
   // const URL_BASE = 'https://rickandmortyapi.com/api/character/'
-  const URL = "http://localhost:3001/rickandmorty/character/"
+  const URL = "http://localhost:3002/rickandmorty/character/"
   const EMAIL = ''
   const PASSWORD = ''
   
@@ -45,13 +45,26 @@ function App() {
   const onClose = (id) => {
     setCharacters(characters.filter(char => char.id !== id))
   }
-  const login = ({email, password}) => {
-    if (email === EMAIL && password === PASSWORD) {
-      setAccess(true)
-      navigate('/home')
-    }
-    else alert('usuario o contraseña incorrectos')
+  // const login = ({email, password}) => {
+  //   if (email === EMAIL && password === PASSWORD) {
+  //     setAccess(true)
+  //     navigate('/home')
+  //   }
+  //   else alert('usuario o contraseña incorrectos')
+  // }
+
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3002/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`)
+      .then(({ data }) => {
+        const { access } = data;
+        setAccess(data);
+        access && navigate('/home');
+        if(!access) return alert('Credenciales incorrectas!')
+    });
   }
+
   useEffect(() => {
     !access && navigate('/')
   }, [access])
