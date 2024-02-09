@@ -28,8 +28,8 @@
 } 
  
 .cardsContainer{
-    gap: 15%;
-    padding: 120px 10% 50px 10%;
+    gap: 10%;
+    padding: 6% 10% 50px 10%;
     justify-content: space-around;
     flex-wrap: wrap;
     display: flex;

@@ -26,7 +26,7 @@ function Form({login}) {
                     <label htmlFor='email'>
                         Email:
                         <input className={style.inp} type='text'
-                            placeholder='Ingresa un email'
+                            placeholder='Your email'
                             id='email'
                             name='email'
                             value={userData.email}
@@ -34,14 +34,14 @@ function Form({login}) {
                         />
                         
                     </label>
-                    {errors.email && <p>{errors.email}</p>}
+                    {errors.email && <p className={style.pa}>{errors.email}</p>}
 
                     <br />
                     
                     <label htmlFor='password'>
                         Password:
                         <input className={style.inp} type='text'
-                            placeholder='Ingresa una contraseña'
+                            placeholder='Your password'
                             id='password'
                             name='password'
                             value={userData.password}

@@ -20,7 +20,7 @@ export default function Card({ id, name, species, status, gender, origin, image,
       }
       else if (!isFav) {
          setIsFav(true)
-         dispatch(addFav({ id, name, species, image, gender }))
+         dispatch(addFav({ id, name, species, status, origin, image, gender }))
       }
    }
 

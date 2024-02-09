@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600&display=swap');
 
 img{
-    width: 185px;
+    width: 200px;
     border-radius: 3px;
 }
 .imgContainer{
@@ -29,9 +29,9 @@ img{
     justify-content: flex-end;
     font-size: 15px;
     padding: 9px 8px 50px 8px;
-    margin: 0px 0px 130px 0px;
+    margin: 0px 0px 160px 0px;
     border-radius: 10px;
-    height: 250px;
+    height: 260px;
 }
 
 
@@ -97,7 +97,7 @@ img{
 
 .secondRow{
     height: 20px;
-    margin-top: 27px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
