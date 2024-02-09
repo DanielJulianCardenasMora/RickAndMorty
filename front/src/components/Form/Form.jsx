@@ -52,7 +52,7 @@ function Form({login}) {
                     { errors.password && <p>{errors.password}</p> }
                     <br/>
                     <button className={style.buttonForm}>Submit</button>
-                    <h3 className={style.font}>Invitado solo click en el boton</h3>
+                    <h3 className={style.font}>Invitado, con una "x" en ambas casillas</h3>
                 </form>
             </div>
             <hr className={style.hr} />
