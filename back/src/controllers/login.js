@@ -1,4 +1,4 @@
-const { User } = require('../DB_connection')
+const { User } = require('../db')
 
 async function login(req, res){
     try {

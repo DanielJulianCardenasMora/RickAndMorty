@@ -1,5 +1,5 @@
 const server = require('./app');
-const { conn } = require('./DB_connection')
+const { conn } = require('./db')
 require('dotenv').config()
 const { PORT } = process.env
 
