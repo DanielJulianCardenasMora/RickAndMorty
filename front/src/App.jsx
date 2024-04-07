@@ -9,18 +9,14 @@ import Detail from './components/Detail/Detail'
 import Form from './components/Form/Form'
 import Favorites from './components/Favorites/Favorites'
 
-
-
+const URL = 'https://rickandmortyback-production-e81f.up.railway.app/rickandmorty/character/'
 
 function App() {
   const { pathname } = useLocation()
   const [access, setAccess] = useState(false)
   const [characters, setCharacters] = useState([])
   const navigate = useNavigate()
-  // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
-  // const API_KEY = 'henrystaff' ?key=${API_KEY}
-  // const URL_BASE = 'https://rickandmortyapi.com/api/character/'
-  const URL = "http://localhost:3001/rickandmorty/character/"
+  // const URL = "http://localhost:3001/rickandmorty/character/"
   const EMAIL = ''
   const PASSWORD = ''
   
@@ -63,8 +59,8 @@ function App() {
 
 
   useEffect(() => {
-    // !access && navigate('/home')
-    !access && navigate('/')
+    !access && navigate('/home')
+    // !access && navigate('/')
   }, [access])
   
   return (
