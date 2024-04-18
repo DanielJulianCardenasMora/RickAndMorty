@@ -36,7 +36,6 @@ function Form({login}) {
                     </label>
                     {errors.email && <p className={style.pa}>{errors.email}</p>}
 
-                    <br />
                     
                     <label htmlFor='password'>
                         Password:
@@ -49,10 +48,9 @@ function Form({login}) {
                         />
                         
                     </label>
-                    { errors.password && <p>{errors.password}</p> }
-                    <br/>
+                    { errors.password && <p className={style.pa}>{errors.password}</p> }
                     <button className={style.buttonForm}>Submit</button>
-                    <h3 className={style.font}>Invitado, con una "x" en ambas casillas</h3>
+                    <h3 className={style.font}>Guest, just enter an "x" on both fields</h3>
                 </form>
             </div>
             <hr className={style.hr} />
