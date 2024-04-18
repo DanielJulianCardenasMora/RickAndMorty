@@ -13,8 +13,8 @@ const regexPassword = /^(?=.*\d)[0-9a-zA-Z]{6,10}$/
 function validation(data) {
     const errors = {}
     if (!regexEmail.test(data.email)) errors.email = 'Debe ser un email'
-    if (!expresionRegular.test(data.email)) errors.email = 'Debe ser de 1 a 35 caracteres'
-    if (!regexPassword.test(data.password)) errors.password = 'Debe contener un numero y ser de 6 a 10 caracteres '
+    if (!expresionRegular.test(data.email)) errors.email = 'Should have 1 to 35 characters'
+    if (!regexPassword.test(data.password)) errors.password = 'Should have at least one number'
     return errors
 }
 
