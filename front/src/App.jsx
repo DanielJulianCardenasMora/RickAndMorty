@@ -20,7 +20,8 @@ function App() {
   // const URL_BASE = 'https://rym2.up.railway.app/api/character/'
   // const API_KEY = 'henrystaff' ?key=${API_KEY}
   // const URL_BASE = 'https://rickandmortyapi.com/api/character/'
-  const URL = "http://localhost:3001/rickandmorty/character/"
+  // const URL = "http://localhost:3001/rickandmorty/character/"
+  const URL_ID = 'https://rickandmortyback-production-e81f.up.railway.app/rickandmorty/character/'
   const EMAIL = ''
   const PASSWORD = ''
   
@@ -29,7 +30,7 @@ function App() {
       if (!id) return alert("Ingresa un ID");
       if (characters.find((char) => char.id === parseInt(id)))
         return alert(`Ya existe el personaje con el id ${id}`);
-      const { data } = await axios.get(`${URL}${id}`);
+      const { data } = await axios.get(`${URL_ID}${id}`);
       if (data.name) {
         setCharacters([data, ...characters]);
       } else {

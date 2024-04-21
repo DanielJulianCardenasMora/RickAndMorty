@@ -16,7 +16,7 @@ img{
 }
 .imgContainer{
     display: block;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
     line-height: 0;
 }
@@ -29,11 +29,14 @@ img{
     justify-content: flex-end;
     font-size: 15px;
     padding: 9px 8px 50px 8px;
-    margin: 0px 0px 160px 0px;
     border-radius: 10px;
     height: 260px;
+    position: relative;
 }
-
+.spacer{
+    height: 9vw;
+    width: 100%;
+}
 
 /* --------------------------------- */
 
@@ -52,27 +55,29 @@ img{
     font-weight: 600;
 }
 .rowName{
-    padding: 0.5em 0.4em 0.5em 0.4em;
+    padding: 0.3em 0.4em 0.3em 0.4em;
     max-width: 45%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 5.5cqi;
-    background-color: rgb(67, 0, 168);
+    font-size: .8vw;
+    line-height: 1;
+    background-color: rgb(118, 27, 254);
     border-radius: 7px;
-    border: 1px solid rgb(255, 255, 255);
-    color:rgb(57, 161, 253);
-
+    border: 1px solid rgb(0, 0, 0);
 }
 .rowSpecies{
-    padding: 0.7em 0.4em 0.7em 0.4em;
+    padding: 0.3em 0.4em 0.3em 0.4em;
     max-width: 45%;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-size: 5.5cqi;
+    font-size: .8vw;
+    line-height: 1;
     background-color: rgb(149, 0, 255);
     border-radius: 7px;
+    border: 1px solid rgb(0, 0, 0);
 }
 .rowName p,
 .rowSpecies p {
@@ -85,13 +90,20 @@ img{
     padding-right: 0px;
     width: 30px;
     height: 30px;
-    display: flex;
+
     align-items: center;
     justify-content: center;
     background-color: rgb(149, 0, 255, 0.4);
     font-size: 18px;
+    z-index: 1000;
+    position: absolute;
+    bottom: 40%;
+    right: 50%;
+    transform: translate(50%)
 }
-
+.box{
+    position: relative;
+}
 
 /* --------------------------------- */
 
@@ -127,6 +139,11 @@ img{
     padding-right: 6px;
     padding-left:6px;
     font-size: 12px;
+    z-index: 1000;
+    position: absolute;
+    bottom: 40%;
+    right: 20%;
+    transform: translate(50%)
 }
 .secondRowId p{
     margin-top: 0;

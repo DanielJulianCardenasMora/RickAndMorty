@@ -1,6 +1,6 @@
 import { ADD_FAV, FILTER, ORDER, REMOVE_FAV } from './action-types'
 import axios from 'axios'
-const ENDPOINT = 'http://localhost:3001/rickandmorty/fav';
+const ENDPOINT = 'https://rickandmortyback-production-e81f.up.railway.app/rickandmorty/fav';
 
 
 

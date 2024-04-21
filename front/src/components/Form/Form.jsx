@@ -23,8 +23,8 @@ function Form({login}) {
         <div className={style.cont}>
             <div className={style.action}>
                 <form className={style.formCont} onSubmit={handleSubmit}>
-                    <label htmlFor='email'>
-                        Email:
+                    <label className={style.label} htmlFor='email'>
+                        <h1>Email:</h1>
                         <input className={style.inp} type='text'
                             placeholder='Your email'
                             id='email'
@@ -37,8 +37,8 @@ function Form({login}) {
                     {errors.email && <p className={style.pa}>{errors.email}</p>}
 
                     
-                    <label htmlFor='password'>
-                        Password:
+                    <label className={style.label2}  htmlFor='password'>
+                    <h1>Password:</h1>
                         <input className={style.inp} type='text'
                             placeholder='Your password'
                             id='password'
@@ -49,9 +49,12 @@ function Form({login}) {
                         
                     </label>
                     { errors.password && <p className={style.pa}>{errors.password}</p> }
-                    <button className={style.buttonForm}>Submit</button>
-                    <h3 className={style.font}>Guest, just enter an "x" on both fields</h3>
+                    
+                    <h3 className={style.guest1} >Guest!!:</h3>
+                    <h3 className={style.font}>just enter an "a" on both fields</h3>
+                   
                 </form>
+                    <button className={style.buttonForm}>Submit</button>
             </div>
             <hr className={style.hr} />
         </div>

@@ -31,6 +31,19 @@ export default function Card({ id, name, species, status, gender, origin, image,
    }, []);
 
    return (
+      <div className={style.box}>
+       {
+            isFav ? (
+                  <button className={style.like} onClick={handleFavorite}>❤️</button>
+            ) : (
+               <button className={style.like} onClick={handleFavorite}>🤍</button>
+            )
+         }
+                        {
+                  pathname === '/home'&& <button className={style.closeCard}
+                     onClick={() => onClose(id)}>x</button>   
+                  }
+         <Link to={`/detail/${id}`}>
       <div className={style.cardUnica}>
      
          <div className={style.imgRow}>
@@ -46,11 +59,9 @@ export default function Card({ id, name, species, status, gender, origin, image,
          <div className={style.firstRow}>
             
             <div className={style.rowName}>
-               <Link to={`/detail/${id}`}>
                   <p>
                      {name}
                   </p>
-               </Link>
             </div>
            
             <div className={style.rowSpecies}>
@@ -66,21 +77,15 @@ export default function Card({ id, name, species, status, gender, origin, image,
                   {id}
                </p>
             </div>
-            {
-            isFav ? (
-                  <button className={style.like} onClick={handleFavorite}>❤️</button>
-            ) : (
-               <button className={style.like} onClick={handleFavorite}>🤍</button>
-            )
-         }
+
             <div className={style.secondRowBot}>
-               {
-                  pathname === '/home'&& <button className={style.closeCard}
-                     onClick={() => onClose(id)}>x</button>   
-               }
+  
+
             </div>  
          </div>
-         
+      </div>
+         </Link>
+         <div className={style.spacer}></div>
       </div>
    )
 }
