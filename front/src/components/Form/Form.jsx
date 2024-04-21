@@ -53,8 +53,8 @@ function Form({login}) {
                     <h3 className={style.guest1} >Guest!!:</h3>
                     <h3 className={style.font}>just enter an "a" on both fields</h3>
                    
-                </form>
                     <button className={style.buttonForm}>Submit</button>
+                </form>
             </div>
             <hr className={style.hr} />
         </div>
