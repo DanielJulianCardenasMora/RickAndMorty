@@ -18,17 +18,23 @@ function SearchBar(props) {
       props.onSearch(id)
       setId('')
    }
+   const handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+        search();
+      }
+    };
 
    return (
       <div className={style.divSearch}>
          <input
             className={style.inpSearch}
             type='search'
-            placeholder="Ingresa id max 826"
+            placeholder="Enter a number max 826"
             value = {id}
-            onChange={handleChange} />
+            onChange={handleChange}
+            onKeyPress={handleKeyPress} />
          <button className={style.botones} onClick={search}><span>
-            AGREGAR</span></button> 
+            ADD</span></button> 
       </div>
    );
 }

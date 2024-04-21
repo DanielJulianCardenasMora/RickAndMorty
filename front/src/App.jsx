@@ -29,15 +29,15 @@ function App() {
     try {
       if (!id) return alert("Ingresa un ID");
       if (characters.find((char) => char.id === parseInt(id)))
-        return alert(`Ya existe el personaje con el id ${id}`);
+        return alert(`You already have the character ${id}`);
       const { data } = await axios.get(`${URL_ID}${id}`);
       if (data.name) {
         setCharacters([data, ...characters]);
-      } else {
-        alert(`No hay personajes con el id ${id}`);
+      } else if(!data.name){
+        alert(`There are no character with id: ${id}`);
       }
     } catch (error) {
-      alert(error.message)
+      alert(`There are no character with id: ${id}`)
     }
   }
 

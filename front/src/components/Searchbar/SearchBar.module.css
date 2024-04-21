@@ -25,12 +25,19 @@
   
   
 }
-::placeholder {
+
+.inpSearch::placeholder {
   color: rgb(201, 1, 1);
   font-family: 'Dosis', sans-serif;
-  font-size: 17px;
+  font-size: .8vw;
+}
+@media (max-width: 1400px){
 
-  
+.inpSearch::placeholder {
+  color: rgb(201, 1, 1);
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.2vw;
+}
 
 }
 

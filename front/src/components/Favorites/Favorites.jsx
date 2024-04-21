@@ -22,8 +22,8 @@ function Favorites() {
       <div>
         <select className={style.sence} name='order'defaultValue='orderCharacter' onChange={handleOrder}>
             <option value='orderCharacter' disabled='disabled'>Order...</option>
-            <option value='A'>Ascendente</option>
-            <option value='D'>Descendente</option>
+            <option value='A'>Ascending</option>
+            <option value='D'>Descending</option>
         </select>
         <select className={style.options} name='filter' defaultValue='All' onChange={handleFilter}>
             <option value='All'>All</option>

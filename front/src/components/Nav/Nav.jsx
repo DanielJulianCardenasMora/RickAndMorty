@@ -18,15 +18,15 @@ export default function NavBar({onSearch}) {
                     </button>
                 </Link>
 
-                <Link to={'/about'}>
-                    <button className={style.botones} >
-                        <span>ABOUT</span>
-                    </button>
-                </Link>
-
                 <Link to={'/favorites'}>
                     <button className={style.botones} >
                         <span>FAVORITES</span>
+                    </button>
+                </Link>
+
+                <Link to={'/about'}>
+                    <button className={style.botones} >
+                        <span>ABOUT</span>
                     </button>
                 </Link>
             </div>
